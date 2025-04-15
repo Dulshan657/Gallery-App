@@ -1,0 +1,137 @@
+/* Global */
+body {
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-family: system-ui, sans-serif;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  /* When an album is selected we switch to a side‑by‑side split view */
+  .split-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    gap: 1rem;
+  }
+  
+  .left-pane,
+  .right-pane {
+    flex: 1;
+  }
+  
+  .right-pane {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2.25rem;
+  }
+  
+  /*  Album table  */ */
+  .album-table {
+    /* Fully center the table element itself */
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-table;      /* shrink to content width */
+    border-collapse: collapse;
+  }
+  
+  .album-table th,
+  .album-table td {
+    border: 1px solid #444;
+    padding: 0.75rem;
+    text-align: center;         /* center cell text */
+  }
+  
+  .album-table th {
+    background: silver;         /* silver header */
+    color: #000;
+  }
+  
+  /* alternating row colors */
+  .album-table tbody tr:nth-child(odd) {
+    background: #fff;           /* white rows */
+    color: #000;
+  }
+  
+  .album-table tbody tr:nth-child(even) {
+    background: #add8e6;        /* light‑blue rows */
+    color: #000;
+  }
+  
+  .album-row {
+    cursor: pointer;
+    transition: filter 0.2s ease;
+  }
+  
+  .album-row:hover {
+    filter: brightness(0.9);
+  }
+  
+  /* ---- Thumbnail (credit‑card) & slideshow (post‑card) sizing ---- */
+  .credit-card-img {
+    width: 320px;
+    height: 202px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Post‑card: 600 × 400 px (3:2 ratio) */
+  .postcard-frame {
+    width: 600px;
+    height: 400px;
+  }
+  
+  .postcard-gallery .image-gallery-slide img {
+    width: 600px !important;
+    height: 400px !important;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /*  Modal  */ */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    position: relative;
+    outline: none;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* --- Buttons & form --- */
+.primary-btn { background:#ff7f00;color:#000;border:none;padding:0.6rem 1.2rem;margin-top:1rem;cursor:pointer;border-radius:4px; }
+.primary-btn:hover { filter:brightness(1.1); }
+.secondary-btn { background:#666;color:#fff;border:none;padding:0.5rem 1rem;border-radius:4px;margin-left:0.5rem;cursor:pointer; }
+.album-form { display:flex;flex-direction:column;gap:0.75rem;margin-top:1rem;background:#111;padding:1rem;border:1px solid #444;border-radius:8px; }
+.album-form input { width:100%;margin-top:0.25rem; }
+.form-error { color:#ff4d4d; }
